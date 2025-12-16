@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: argocd-control-plane
+  namespace: argocd
+spec:
+  sourceRepos:
+  - https://git.company.com/infra/argocd       # OLD repo
+  destinations:
+  - namespace: argocd
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist: []
+  namespaceResourceWhitelist:
+  - group: ""
+    kind: ConfigMap
+  - group: apps
+    kind: Deployment

@@ -7,7 +7,7 @@ spec:
   sourceRepos:
   - https://github.com/RamitTechnical/control-plane.git       # OLD repo
   destinations:
-  - namespace: argocd
+  - namespace: app
     server: https://kubernetes.default.svc
   clusterResourceWhitelist: []
   namespaceResourceWhitelist:
@@ -15,3 +15,5 @@ spec:
     kind: ConfigMap
   - group: apps
     kind: Deployment
+  - group: ""
+    kind: Service

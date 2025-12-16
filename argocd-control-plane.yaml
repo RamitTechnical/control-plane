@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   sourceRepos:
-  - https://git.company.com/infra/argocd       # OLD repo
+  - https://github.com/RamitTechnical/control-plane.git       # OLD repo
   destinations:
   - namespace: argocd
     server: https://kubernetes.default.svc
